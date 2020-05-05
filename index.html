@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <title>Gertakariak - Incidentes</title>
+    <link href='http://api.tiles.mapbox.com/mapbox.js/v0.6.6/mapbox.css' rel='stylesheet' />
+    <link href='site.css' rel='stylesheet' />
+  </head>
+  <body>
+    <div id='masthead'>
+      <div id='header'>
+          <h1><a href='/'><span class='brand'>Errenteriako </span>Udaltzaingoa <span class='subtitle'>GERTAKARIAK / INCIDENTES</span></a></h1>
+      </div>
+      <div class='limiter'>
+        <!-- block for menu by type incident -->
+        <ul class='navigation clearfix'>
+          <li><a href='#' class='active' id='all_incident_type'>Guztiak Erakutsi/Mostrar Todos</a></li>
+          <li><a id='Lapurketa/Robo-Hurto' data-layer='1' href='#'>Lapurketa/Robo-Hurto</a></li>
+          <li><a id='Kalteak/Daños' data-layer='2' href='#'>Kalteak/Daños</a></li>
+          <li><a id='Lesioak/Lesiones' data-layer='3' href='#'>Lesioak/Lesiones</a></li>
+          <li><a id='Bide_Segurtasuna/Seguridad_Vial' data-layer='4' href='#'>Bide Segurtasuna/Seguridad Vial</a></li>
+          <li><a id='Trafiko_Istripua/Accidente_Tráfico' data-layer='5' href='#'>Trafiko Istripua/Accidente Tráfico</a></li>
+          <li><a id='Besteak/Otros' data-layer='6' href='#'>Besteak/Otros</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- Dropdown: Graph -->
+    <div class='dropdown statistic_by_month' id='all_incident_type_statistic'></div>
+    <div id='close_block_stac' class='close'> <a href='#'>&times;</a> </div>
+    <div id='close_block_inf' class='close'> <a href='#'>&times;</a></div>
+    <!-- Section: Map -->
+    <div class='map-container'>
+      <div id='map'></div>
+    </div>
+    <!-- Section: Month Selection -->
+    <div class='block clearfix'>
+      <div class='limiter'>
+        <ul id='months' class='navigation clearfix'>
+          <li>
+            <a href='#' class='active' id='all_incident_month'>Guztiak / Todos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Section: Graph and Downloads -->
+    <div class='section'>
+      <div class='limiter clearfix'>
+        <!-- Graph -->
+        <div id='block_statistic'>
+          <h3>Gertakari Portzentai Guztira / Porcentaje total de incidentes</h3>
+          <div id='img_total_percentage'></div>
+          <div id='num-incident0'></div>
+          <div id='num-incident1'></div>
+          <div id='num-incident2'></div>
+          <div id='num-incident3'></div>
+          <div id='num-incident4'></div>
+          <div id='num-incident5'></div>
+          <div id='num-incident6'></div>
+        </div>
+      </div>
+    </div>
+    <!-- Modals -->
+    <div id='backdrop'></div>
+    <a id='close' href='#close'>&times;</a>
+    <script src='https://www.google.com/jsapi'></script>
+    <script src='http://api.tiles.mapbox.com/mapbox.js/v0.6.6/mapbox.js'></script>
+    <script src='ext/jquery.min.js'></script>
+    <script src='ext/underscore.min.js'></script>
+    <script src='ext/google_docs.js'></script>
+    <script src='site.js'></script>
+  </body>
+</html>
